@@ -1,0 +1,289 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.content{
+	width: 1004px;
+	margin: 0 auto;
+	overflow: hidden;
+	margin-top: 168px;	
+}
+.title{
+	float: left;
+	text-align: center;
+	margin-top: 100px;
+}
+.login{
+	float: right;
+	background: url(../image/loginbcg.png)no-repeat 0px 0px;
+	width: 360px;
+	height: 539px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.login p:first-child{
+	margin-top: 145px;
+}
+.login p{
+	height: 40px;
+	margin-top: 25px;
+	color: #31a3dd;
+	font-family: "微软雅黑";
+	width: 100%;
+	position: relative;
+}
+.login p img{
+	position: absolute;
+	left: 11px;
+	top: 7px;
+}
+.user,.password,.code,.userDepartments,.userConnectNames,.userEmails,.userPhones{
+	border-radius: 5px;
+	border: none;
+	outline: none;
+	color: #c0c0c0;
+	height: 40px;
+	line-height: 40px;
+	font-family: "微软雅黑";
+	text-indent: 55px;
+	font-size: 15px;
+	width: 100%;
+	background: #fff;
+}
+.code{
+	width: 230px;
+}
+.codes{
+	width: 230px;
+}
+.code-span{
+	display: block;
+	position: absolute;
+	right: 0px;
+	top: 1px;
+	height: 30px;
+	padding:3px;
+	color:#977176; 
+	background: #fff;
+	border-radius: 5px;
+	width: 121px;
+	text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+
+}
+.submit,.add{
+	float: left;
+	width: 100%;
+	height: 100%;
+	line-height: 40px;
+	text-align: center;
+	font-family: "微软雅黑";
+	font-size: 17px;
+	background: #5ec724;
+	color: #fff;
+	border-radius: 5px;
+	text-decoration: none;
+	outline: none;
+	/*border: none;*/
+	cursor: pointer;
+	border-color: #53c724;
+	border: 0;
+}
+.add{
+	background: #31a3dd;
+}
+/*状态总览css*/
+.box{
+	width: 1087px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.head{
+	border-bottom: 1px solid #c0c0c0;
+	width: 100%;
+	height: 98px;
+}
+.head-content{
+	width: 1087px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.left{
+	float: left;
+	padding-top: 16px;
+}
+.right{
+	float: right;
+	padding-top: 51px;
+}
+.user-inline{
+	display: inline-block;
+	padding-left: 34px;
+	background: url(../image/pageuser.png) no-repeat 3px 0px;
+}
+.user-inline span{
+	font-size: 13px;
+	color: #8d8d8d;
+	font-family: "微软雅黑";
+}
+.right i{
+	font-weight: 400;
+	font-style: normal;
+	color: #8d8d8d;
+	margin: 0px 9px;
+	position: relative;
+	top: 6px;
+	font-size: 26px;
+}
+.exit{
+	display: inline-block;
+	background: url(../image/exit.png) no-repeat 0px 1px;
+	background-size: 26%;
+	text-indent: 24px;
+	color: black;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	cursor: pointer;
+}
+.box-left{
+	float: left;
+	width: 130px;
+	background: #31a3dd;
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+.box-left div{
+	height:90px;
+	position: relative;
+	
+	text-align: center;
+	color: #fff;
+	line-height: 129px;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	z-index: 0;
+}
+.box-left div span{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #4E5869;
+	opacity: 0.2;
+	z-index:-1;
+	display: none;
+
+}
+.box-left div img{
+	position: absolute;
+	left: 49px;
+	top: 20px;
+}
+.box-left a{
+	text-decoration: none;
+}
+.right-title{
+	height: 60px;
+	line-height: 60px;
+	font-family:"微软雅黑";
+	font-size: 18px;
+	color: #646464;
+	text-indent: 50px;
+	border-bottom: 1px solid #31a3dd;
+}
+ul{
+	list-style: none;
+}
+ .ul-title{
+	overflow: hidden;
+	margin-top: 80px;
+	list-style: none;
+
+}
+.ul-title img{
+	position: absolute;
+	left: 10px;
+	top: 2px;
+}
+.ul-left{
+	float: left;
+	width: 375px;
+	padding-left: 100px;
+	height: 85px;
+	position: relative;
+	margin-left: 100px;
+
+}
+.ul-left li,.ul-right li{
+	  line-height: 36px;
+	  font-family: "微软雅黑";
+	  color: #969696;
+	  font-size: 15px;
+}
+.ul-right{
+	float: left;
+	height: 85px;
+	position: relative;
+	padding-left: 100px;
+}
+.ul-title li:last-child{	
+	color:#f6b67e;
+}
+/*部门管理*/
+.box-right{
+	position: relative;
+}
+.new-department{
+    display: block;
+	width: 117px;
+    border-radius: 5px;
+	border: none;
+	background: #f4a14f;
+	color: #fff;
+	font-family: "微软雅黑";
+	text-align: center;
+	line-height: 35px;
+	font-size: 15px;
+	position: absolute;
+	right: 10px;
+	top: 14px;
+	cursor: pointer;
+
+}
+/*试用申请*/
+.trials{
+	float: right;
+	background: url(../image/trial-bcg.png)no-repeat 0px 0px;
+	width: 362px;
+	height: 539px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.trials p:first-child {
+  margin-top: 70px;
+}
+.trials p img{
+  position: absolute;
+  left: 3px;
+  top: -2px;
+}
+#btnSendCode{
+	display: block;
+  position: absolute;
+  right: 0px;
+  top: 1px;
+  height: 30px;
+  color: #977176;
+  background: #fff;
+  border-radius: 5px;
+  width: 121px;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+  border: 0;
+  outline: none;
+  font-family: "微软雅黑";
+  color: #c0c0c0;
+}
