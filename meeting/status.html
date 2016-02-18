@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>status</title>
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<div class="head">
+		<div class="head-content">
+			<h1 class="left"><img src="image/logo.png" alt=""></h1>
+			<div class="right">
+				<div class="user-inline">
+					<span>用户：</span>
+					<span>65415646546</span>	
+				</div>
+				<i>|</i>
+				<div class="exit">
+					退出
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="box">
+		<div class="box-left">
+			<a href="www.baidu.com">
+			<div>
+				<img src="image/page01.png" alt="">
+				状态总览
+				<span class="show" style="display:block">		
+				</span>
+			</div>
+		</a>
+		<a href="">
+			<div>
+				<img src="image/page02.png" alt="">
+				会议室管理<span></span></div></a>
+		<a href="">
+			<div>
+				<img src="image/page03.png" alt="">
+				部门管理<span></span></div></a>
+		<a href="">
+			<div>
+				<img src="image/page04.png" alt="">
+				号码分配<span></span></div></a>
+		<a href="">
+			<div>
+				<img src="image/page05.png" alt="">
+				会议管理<span></span></div></a>
+		<a href="">
+			<div>
+				<img src="image/page06.png" alt="">
+				硬件绑定管理<span></span></div></a>
+		<a href="">
+			<div>
+				<img src="image/page07.png" alt="">
+				修改密码<span></span></div>
+		</a>
+		</div>
+		<div class="box-right">
+			<div class="right-title">状态总览</div>
+			<ul class="ul-title">
+				<li class="ul-left" style="backgroudn">
+					<ul>
+						<img src="image/content01.png" alt="">
+						<li>所属机构</li>
+						<li>鹏博士集团</li>
+					</ul>
+				</li>
+				<li class="ul-right">
+					<ul>
+						<img src="image/content02.png" alt="">
+						<li>授权期限</li>
+						<li>2016年8-20至12-20日</li>
+					</ul>
+				</li>
+			</ul>
+			<ul class="ul-title">
+				<li class="ul-left" style="backgroudn">
+					<ul>
+						<img src="image/content03.png" alt="">
+						<li>剩余天数</li>
+						<li>25天</li>
+					</ul>
+				</li>
+				<li class="ul-right">
+					<ul>
+						<img src="image/content04.png" alt="">
+						<li>账号总数</li>
+						<li>100个</li>
+					</ul>
+				</li>
+			</ul>
+			<ul class="ul-title">
+				<li class="ul-left" style="backgroudn">
+					<ul>
+						<img src="image/content05.png" alt="">
+						<li>会议室总数</li>
+						<li>50个</li>
+					</ul>
+				</li>
+				<li class="ul-right">
+					<ul>
+						<img src="image/content05.png" alt="">
+						<li>当前可用会议数</li>
+						<li>25个</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+<script src="js/jquery.min.js"></script>
+<script>
+	$(".box-left div").hover(
+  function () {
+
+  	$(".box-left div span").hide();
+  	$(".show").show();
+    $(this).children("span").show();
+
+  },
+  function () {
+     $(".box-left div span").hide();
+     $(".show").show();
+  }
+);
+</script>
+</body>
+</html>

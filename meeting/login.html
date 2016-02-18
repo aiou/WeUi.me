@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>start-meeting</title>
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<style>
+	html{
+	width: 100%;
+	height: 100%;
+	}
+body{
+	width: 100%;
+	height: 100%;
+	background: url(image/bodybcg.png) no-repeat 0px 0px;
+	background-size: 100%;
+}
+</style>
+<body>
+<div class="content">
+	<div class="title">
+		<img src="image/title.png" alt="">
+	</div>
+	<div class="login">
+		<form action="">
+		<p class="users">
+			<img src="image/user.png" alt="">
+			<input type="text"id="userName" placeholder="请输入用户名" class="user"></p>
+		<p class="passwords">
+			<img src="image/password.png" alt="">
+			<input type="text"id="userPassWord" placeholder="密码" class="password"></p>
+		<p class="codes">
+			<img src="image/code.png" alt="">
+			<input type="text"id="codeStr" placeholder="请输入验证码" class="code">
+			<span class="code-span"></span>
+		</p>
+
+		<p><a href="" class="submit"onclick="check();">登录</a></p>
+	</form>
+		<p style="text-align:center;">如我有会议邀请，请点击</p>
+		<p><a href="" class="add" >受邀加入</a></p>
+		
+	</div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script>
+//获得一个随机四位数
+
+	var one=Math.floor(Math.random()*9+1).toString();
+	var two=Math.floor(Math.random()*10).toString();
+	var three=Math.floor(Math.random()*10).toString();
+	var four=Math.floor(Math.random()*10).toString();
+	var random=one+two+three+four;
+	var randoms=Number(random)
+$(".code-span").html(randoms);
+var user_name = '';
+var passWord = '';
+var codeStr="";
+function check(){
+
+		var user_name = $.trim($('#userName').val());
+		var passWord = $.trim($('#userPassWord').val());
+		var codeStr = $.trim($('#codeStr').val());
+		if(user_name == '' || user_name == '请输入用户名' ){
+			// user_name.focus()
+			alert('请输入用户名');
+			return false;			
+		}
+		if(passWord == ''){
+			// password.focus()
+			alert('请输入密码');
+			return false;			
+		}
+		if(codeStr == '' || codeStr!= $(".code-span").html()){
+			// codeStr.focus()
+			alert('请输入正确的验证码');
+			return false;
+			
+		}
+		var data = {
+			action:"login",
+			userName:user_name,
+			passWord:passWord,	
+		};
+		$('form').submit();
+		$.ajax({
+			data:data,
+			url:'/web/login/ajax.php', 
+			type:'post',        
+			dataType:'text',
+			success:function(msg){
+				// if(msg == 'yzmError'){
+				// 	alert('验证码错误');
+				// 	$('#passWord').val('');
+				// 	$('#codeStr').val('');
+				// 	return false;
+				// }
+				if(msg == 'error'){
+					alert('用户或密码错误！');
+					$('#passWord').val('');
+					return false;
+				}
+				else if(msg == 'passError'){
+					alert('该用户还未激活，不能登录');
+					$('#passWord').val('');
+					return false;
+				}
+				else{
+					location.href=msg;
+				}
+			}
+		});
+	}
+</script>
+</body>
+</html>                                     
